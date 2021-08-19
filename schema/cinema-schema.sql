@@ -31,6 +31,7 @@ CREATE TABLE film (
 CREATE TABLE booking (
     booking_id INT AUTO_INCREMENT,
     fk_cinema_id INT,
+    ticket_price DECIMAL(10,2) NOT NULL,
     date_of_booking DATE NOT NULL,
     date_of_showing DATE NOT NULL,
     cinema_screen TINYINT NOT NULL,
