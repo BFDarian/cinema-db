@@ -23,7 +23,7 @@ CREATE TABLE film (
     duration TIME NOT NULL,
     director VARCHAR(50) NOT NULL,
     release_date DATE NOT NULL,
-    synopsis VARCHAR(300) NOT NULL,
+    synopsis VARCHAR(400) NOT NULL,
     PRIMARY KEY (film_id)
 );
 
@@ -44,3 +44,5 @@ CREATE TABLE booking (
     FOREIGN KEY (fk_film_id) REFERENCES film(film_id)
 );
 
+-- INSERT INTO film (film_name, duration, director, release_date, synopsis )
+-- VALUES ('Inglourious Bastards', 2:33, Quentin Tarantino, 2009-08-19, 'The film tells an alternate history story of two plots to assassinate Nazi Germany's leadership, one planned by Shosanna Dreyfus, a young French Jewish cinema proprietor, and the other by a team of Jewish American soldiers led by First Lieutenant Aldo Raine. Christoph Waltz co-stars as Hans Landa, an SS colonel in charge of tracking down Raine's group.' )
