@@ -36,7 +36,7 @@ CREATE TABLE booking (
     cinema_screen TINYINT NOT NULL,
     filmName VARCHAR(50) NOT NULL,
     fk_customer_id INT,
-    fk_film_id,
+    fk_film_id INT,
     PRIMARY KEY (film_id),
     FOREIGN KEY (fk_cinema_id) REFERENCES cinema(cinema_id),
     FOREIGN KEY (fk_customer_id) REFERENCES customer(customer_id),
