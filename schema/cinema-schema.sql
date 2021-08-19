@@ -20,7 +20,7 @@ CREATE TABLE cinema (
 CREATE TABLE film (
     film_id INT AUTO_INCREMENT,
     film_name VARCHAR(50) NOT NULL,
-    duration VARCHAR(20) NOT NULL,
+    duration VARCHAR NOT NULL,
     director VARCHAR(50) NOT NULL,
     release_date DATE NOT NULL,
     PRIMARY KEY (film_id)
@@ -42,10 +42,3 @@ CREATE TABLE booking (
     FOREIGN KEY (fk_customer_id) REFERENCES customer(customer_id),
     FOREIGN KEY (fk_film_id) REFERENCES film(film_id)
 );
-
-
-
---INSERT INTO customer(email, customer_name, customer_phoneNo)
---VALUES('test1@fake.com', 'John Smith','07853254367'), ('test2@fake.com', 'Jane Doe','07743256301'), ('test3@fake.com', 'Harvey Jones','07744986321');
---INSERT INTO film(film_name, duration, director, release_date)
---VALUES ('Inglourious Bastards', '02:33:00.00000', Quentin Tarantino, '2009-08-19');
