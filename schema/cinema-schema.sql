@@ -5,7 +5,7 @@ CREATE DATABASE cinema;
 CREATE TABLE customer (
     customer_id INT AUTO_INCREMENT,
     email VARCHAR(40) NOT NULL,
-    customer_name VARCAHR(50) NOT NULL,
+    customer_name VARCHAR(50) NOT NULL,
     customer_phoneNo VARCHAR(30) NOT NULL,
     PRIMARY KEY (customer_id)
 );
