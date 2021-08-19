@@ -20,7 +20,7 @@ CREATE TABLE cinema (
 CREATE TABLE film (
     film_id INT AUTO_INCREMENT,
     film_name VARCHAR(50) NOT NULL,
-    duration VARCHAR NOT NULL,
+    duration VARCHAR(20) NOT NULL,
     director VARCHAR(50) NOT NULL,
     release_date DATE NOT NULL,
     PRIMARY KEY (film_id)
