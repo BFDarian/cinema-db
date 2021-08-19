@@ -1,6 +1,6 @@
 DROP DATABASE if exists cinema;
 CREATE DATABASE cinema;
-
+USE cinema;
 
 CREATE TABLE customer (
     customer_id INT AUTO_INCREMENT,
