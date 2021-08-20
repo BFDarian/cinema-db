@@ -1,4 +1,4 @@
-DROP DATABASE if exists cinema_db;
+DROP DATABASE if exists cinema;
 CREATE DATABASE cinema;
 USE cinema;
 
