@@ -1,4 +1,4 @@
-DROP DATABASE if exists cinema;
+DROP DATABASE if exists cinema_db;
 CREATE DATABASE cinema;
 USE cinema;
 
@@ -34,7 +34,6 @@ CREATE TABLE booking (
     date_of_booking DATE NOT NULL,
     date_of_showing DATE NOT NULL,
     cinema_screen TINYINT NOT NULL,
-    filmName VARCHAR(50) NOT NULL,
     fk_customer_id INT,
     fk_film_id INT,
     PRIMARY KEY (booking_id),

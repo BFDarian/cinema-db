@@ -1,0 +1,81 @@
+INSERT INTO customer(email, customer_name, customer_phoneNo)
+VALUES('test1@fake.com', 'John Smith','07853254367'), ('test2@fake.com', 'Jane Doe','07743256301'), ('test3@fake.com', 'Harvey Jones','07744986321');
+  
+INSERT INTO cinema(cinema_name, cinema_address)
+VALUES ('Odeon', 'S45 5EF'),('Cineworld', 'CV21 5TR'), ('VUE', 'L17 6UR');
+
+
+INSERT INTO film(film_name, duration, director, release_date)
+VALUES ('Inglourious Bastards', '02:33:00.00000', 'Quentin Tarantino', '2009-08-19');
+
+INSERT INTO film(film_name, duration, director, release_date)
+VALUES ('Inglourious Bastards', '02:33:00.00000', 'Quentin Tarantino', '2009-08-19'), ('Lord of the Rings: The fellowship of the ring', '228 minutes', 'Peter Jackson', '2001-12-10'), ('Lord of the Rings: The Two Towers', '223 minutes', 'Peter Jackson', '2002-12-11');
+
+
+INSERT INTO booking(fk_cinema_id, ticket_price, date_of_booking, date_of_showing, cinema_screen, filmName, fk_customer_id, fk_film_id)
+VALUES (1, 8.90, '2009-08-25', '2009-08-27', 5, 'Inglourious Bastards', 2,1), (3, 5.90, '2001-12-13', '2001-12-18', 7, 'Lord of the Rings: The fellowship of the ring', 1,2), (2, 6.90, '2002-12-01', '2002-12-11', 11, 'Lord of the Rings: The Two Towers', 3,3);
+
+
+DELETE FROM customer WHERE customer_id = 2;
+
+DELETE FROM booking WHERE cinema_screen = 5;
+
+
+SELECT price, pizza_type
+FROM pizzas
+WHERE vegetarian = FALSE;
+
+
+
+READ / SELECT
+
+
+
+
+SELECT * FROM <table name> - Gets us all the values from the table
+
+SELECT <what columns / fields> FROM <table>
+
+See pizza type and ID from pizza table
+
+SELECT pizza_id, pizza_type FROM pizzas;
+
+SELECT price, pizza_type FROM pizzas;
+
+I want to see the price and type of pizza for all pizzas that aren't vegetarian
+
+SELECT price, pizza_type
+FROM pizzas
+WHERE vegetarian = FALSE;
+
+I want to see the ID, pizza_type and vegetarian (boolean) of all pizzas that are greater than 15
+
+SELECT pizza_id, pizza_type, vegetarian
+FROM pizzas
+WHERE price > 15;
+
+
+
+
+UPDATE customer 
+SET email = 'John@test1.org'
+WHERE   CUSTOMER_NAME = 'John Smith';
+
+
+UPDATE cinema  
+SET cinema_address = 'SW31 3WD'
+WHERE cinema_id = 2;
+
+
+UPDATE film  
+SET film_name = 'The Lord of the Rings:1'
+WHERE film_id = 2;
+
+UPDATE booking  
+SET ticket_price = 8.99
+WHERE fk_cinema_id = 2;
+
+
+SELECT booking_id, date_of_booking,film_name,cinema_screen 
+FROM booking
+WHERE ticket_price > 10;
